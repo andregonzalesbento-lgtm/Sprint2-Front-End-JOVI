@@ -1,0 +1,390 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter', sans-serif;
+}
+
+.barra-superior{
+
+    width:100%;
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:fixed;
+
+    top:0;
+
+    background:rgba(0,0,0,0.4);
+
+    backdrop-filter:blur(15px);
+
+    z-index:1000;
+}
+
+.logo h1{
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+.menu{
+
+    display:flex;
+
+    gap:25px;
+
+    list-style:none;
+}
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.menu a:hover{
+    opacity:0.7;
+}
+
+.secao-principal{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:120px 20px 50px;
+}
+
+.tela-camera{
+
+    width:340px;
+
+    height:700px;
+
+    border-radius:40px;
+
+    background:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop') center/cover;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    box-shadow:0 0 40px rgba(255,255,255,0.08);
+}
+
+.tela-camera::before{
+
+    content:'';
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+
+.vidro{
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.status-ia{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    z-index:10;
+}
+
+.deteccao-cena{
+
+    position:absolute;
+
+    top:120px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:80%;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    z-index:10;
+}
+
+.deteccao-cena h2{
+    font-size:1rem;
+    margin-bottom:10px;
+}
+
+.deteccao-cena p{
+    font-size:0.8rem;
+    color:#d1d1d1;
+}
+
+.controles-camera{
+
+    width:100%;
+
+    position:absolute;
+
+    bottom:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    z-index:10;
+}
+
+.botao-captura{
+
+    width:95px;
+
+    height:95px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 0 30px rgba(255,255,255,0.4);
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.botao-captura:hover{
+    transform:scale(1.05);
+}
+
+.botao-secundario{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    color:white;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.botao-secundario:hover{
+    background:rgba(255,255,255,0.15);
+}
+
+.secao-funcionalidades,
+.secao-manual,
+.secao-galeria{
+
+    padding:100px 8%;
+}
+
+.titulo-secao{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.titulo-secao h2{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+}
+
+.titulo-secao p{
+    color:#bdbdbd;
+}
+
+.container-cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+}
+
+.card{
+
+    width:300px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+
+    color:#c9c9c9;
+
+    line-height:1.6;
+}
+
+.controles-manuais{
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:30px;
+}
+
+.grupo-slider{
+    margin-bottom:30px;
+}
+
+.grupo-slider label{
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+.grupo-slider input{
+    width:100%;
+}
+
+.grid-galeria{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+}
+
+.item-galeria{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:25px;
+
+    background:#1b1b1b;
+
+    transition:0.3s;
+}
+
+.item-galeria:hover{
+    transform:scale(1.03);
+}
+
+.rodape{
+
+    padding:40px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+@media(max-width:768px){
+
+    .barra-superior{
+
+        padding:20px;
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    .menu{
+
+        gap:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .tela-camera{
+
+        width:100%;
+
+        max-width:340px;
+
+        height:650px;
+    }
+
+    .titulo-secao h2{
+        font-size:1.6rem;
+    }
+
+}
